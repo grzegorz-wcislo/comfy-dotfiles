@@ -179,6 +179,7 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-foreground = ${xrdb:color4}
 
 format-full = <ramp-capacity> <label-full>
+format-full-foreground = ${xrdb:color4}
 format-full-overline = ${xrdb:color4}
 
 ramp-capacity-0 = 
@@ -201,6 +202,7 @@ format-discharging = <label-discharging>
 format-discharging-foreground = ${xrdb:color4}
 
 format-full = <label-full>
+format-full-foreground = ${xrdb:color4}
 
 [module/temperature]
 type = internal/temperature

@@ -48,7 +48,7 @@ modules-right = wlan xbacklight volume filesystem memory cpu battery1 battery2 t
 # BEGIN desktop
 modules-left = i3
 modules-center =
-modules-right = wlan xbacklight volume filesystem memory cpu battery1 battery2 temperature date
+modules-right = wlan xbacklight volume filesystem memory cpu temperature date
 # END desktop
 
 tray-position = right

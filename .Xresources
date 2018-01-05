@@ -47,9 +47,6 @@ rofi*color-window:  #263238, #263238, #263238
 rofi*color-normal:  #263238, #eceff1, #263238, #ffa74d, #263238
 rofi*color-active:  #263238, #eceff1, #263238, #ffa74d, #263238
 rofi*color-urgent:  #263238, #eceff1, #263238, #ffa74d, #263238
-!!rofi*color-normal:  base00,  base05,  base00,  base08,  base00
-!!rofi*color-active:  base00,  base08,  base00,  base00,  base09
-!!rofi*color-urgent:  base00,  base08,  base00,  base00,  base09
 ! Set the desired separator style
 rofi*separator-style: solid
 rofi*hide-scrollbar: true

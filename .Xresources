@@ -31,7 +31,7 @@
 
 Xft.antialias: true
 
-URxvt*font: xft:monofont:size=14
+URxvt*font: xft:monofont:size=16
 URxvt*internalBorder: 15
 URxvt*scrollBar: False
 URxvt*depth: 32
@@ -50,4 +50,4 @@ rofi*color-urgent:  #263238, #eceff1, #263238, #ffa74d, #263238
 ! Set the desired separator style
 rofi*separator-style: solid
 rofi*hide-scrollbar: true
-rofi*font: monofont 14
+rofi*font: monofont 16

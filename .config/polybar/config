@@ -40,15 +40,15 @@ font-1 = "Inconsolata Nerd Font Mono:pixelsize=30;5"
 font-2 = "Inconsolata Nerd Font Mono:pixelsize=18;4"
 
 # BEGIN laptop
-modules-left = i3
-modules-center =
-modules-right = wlan xbacklight volume filesystem memory cpu battery1 battery2 temperature date
+#modules-left = i3
+#modules-center =
+#modules-right = wlan xbacklight volume filesystem memory cpu battery1 battery2 temperature date
 # END laptop
 
 # BEGIN desktop
-modules-left = i3
-modules-center =
-modules-right = wlan xbacklight volume filesystem memory cpu temperature date
+#modules-left = i3
+#modules-center =
+#modules-right = xbacklight volume filesystem memory cpu temperature date
 # END desktop
 
 tray-position = right

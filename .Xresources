@@ -30,6 +30,7 @@
 #define monofont Inconsolata Nerd Font Mono
 
 Xft.antialias: true
+Xft.dpi: 96
 
 URxvt*font: xft:monofont:size=16
 URxvt*internalBorder: 15

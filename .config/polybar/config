@@ -15,7 +15,6 @@ foreground-alt = ${xrdb:color15}
 warning = #FF0000
 
 [bar/perfect]
-monitor = eDP1
 width = 100%
 height = 27
 fixed-center = true
@@ -40,15 +39,17 @@ font-1 = "Inconsolata Nerd Font Mono:pixelsize=30;5"
 font-2 = "Inconsolata Nerd Font Mono:pixelsize=18;4"
 
 ; BEGIN laptop
-;modules-left = i3
-;modules-center =
-;modules-right = wlan xbacklight volume filesystem memory cpu battery1 battery2 temperature date
+;monitor = eDP1
+;;modules-left = i3
+;;modules-center =
+;;modules-right = wlan xbacklight volume filesystem memory cpu battery1 battery2 temperature date
 ; END laptop
 
 ; BEGIN desktop
-;modules-left = i3
-;modules-center =
-;modules-right = xbacklight volume filesystem memory cpu temperature date
+;monitor = HDMI-0
+;;modules-left = i3
+;;modules-center =
+;;modules-right = xbacklight volume filesystem memory cpu temperature date
 ; END desktop
 
 tray-position = right

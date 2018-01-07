@@ -27,14 +27,16 @@
 *color7             : #cfd8dc
 *color15            : #eceff1
 
-#define monofont Inconsolata Nerd Font Mono
+#define MONOFONT Inconsolata Nerd Font Mono
 
 ! BEGIN laptop
-!Xft.dpi: 96
+!Xft.dpi: 120
+!URxvt*font: xft:MONOFONT:dpi=190:size=10
 ! END laptop
 
 ! BEGIN desktop
 !Xft.dpi: 82
+!URxvt*font: xft:MONOFONT:size=16
 ! END desktop
 
 Xft.antialias: true
@@ -45,7 +47,6 @@ Xft.hinting: true
 Xft.rgba: rgb
 
 
-URxvt*font: xft:monofont:size=16
 URxvt*internalBorder: 15
 URxvt*scrollBar: False
 URxvt*depth: 32
@@ -64,4 +65,4 @@ rofi*color-urgent:  #263238, #eceff1, #263238, #ffa74d, #263238
 ! Set the desired separator style
 rofi*separator-style: solid
 rofi*hide-scrollbar: true
-rofi*font: monofont 16
+rofi*font: MONOFONT 16

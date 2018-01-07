@@ -119,6 +119,6 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 
 # startup
-exec --no-startup-id compton -b
+exec --no-startup-id compton --backend=glx --xrender-sync --xrender-sync-fence
 exec --no-startup-id polybar perfect -q
 exec --no-startup-id feh --bg-scale -z /home/grzegorz/Wallpapers

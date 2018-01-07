@@ -29,8 +29,21 @@
 
 #define monofont Inconsolata Nerd Font Mono
 
+! BEGIN laptop
+!Xft.dpi: 96
+! END laptop
+
+! BEGIN desktop
+!Xft.dpi: 82
+! END desktop
+
 Xft.antialias: true
-Xft.dpi: 96
+Xft.autohint: true
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: true
+Xft.rgba: rgb
+
 
 URxvt*font: xft:monofont:size=16
 URxvt*internalBorder: 15

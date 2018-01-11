@@ -118,6 +118,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 
+# keyboard layout
+exec --no-startup-id setxkbmap -layout pl -option caps:escape
+
 # startup
 exec --no-startup-id compton --backend=glx --xrender-sync --xrender-sync-fence
 exec --no-startup-id polybar perfect -q

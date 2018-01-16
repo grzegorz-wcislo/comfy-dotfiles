@@ -24,6 +24,9 @@ client.background       $bg
 # start a terminal
 bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
+# start file explorer
+bindsym $mod+e exec --no-startup-id urxvt -e ranger
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -122,6 +125,6 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 exec --no-startup-id setxkbmap -layout pl -option caps:escape
 
 # startup
-exec --no-startup-id compton --backend=glx --xrender-sync --xrender-sync-fence
+exec --no-startup-id compton -b --backend glx --vsync opengl-swc --xrender-sync --xrender-sync-fence --paint-on-overlay
 exec --no-startup-id polybar perfect -q
 exec --no-startup-id feh --bg-scale -z /home/grzegorz/Wallpapers

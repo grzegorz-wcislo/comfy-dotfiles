@@ -1,14 +1,14 @@
 # Color variables
 set_from_resource $bg color0 #000000
-set_from_resource $active color8 #000000
-set_from_resource $alert color1 #ff0000
+set_from_resource $active color12 #000000
+set_from_resource $alert color5 #ff0000
 
 # global mod key
 set $mod Mod1
 
 # container borders and gaps
 gaps inner 10
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 smart_borders on
 
 # contrainer class colors
@@ -34,7 +34,7 @@ bindsym $mod+r exec --no-startup-id firefox
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun
 
 # change focus
 bindsym $mod+h focus left

@@ -42,7 +42,7 @@ URxvt*internalBorder: 15
 URxvt*scrollBar: False
 URxvt*depth: 32
 
-rofi*terminal: urxvt
+rofi*terminal: st
 rofi*lines: 1
 rofi*display-drun: Launch
 rofi*matching: fuzzy

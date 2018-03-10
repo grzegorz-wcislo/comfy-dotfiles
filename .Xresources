@@ -27,26 +27,17 @@
 *color7             : #cfd8dc
 *color15            : #eceff1
 
-#define MONOFONT Inconsolata Nerd Font Mono
+#define MONOFONT DejaVu Sans Mono Nerd Font
 
 ! BEGIN laptop
 !Xft.dpi: 120
-!URxvt*font: xft:MONOFONT:dpi=190:size=10
 ! END laptop
 
 ! BEGIN desktop
 !Xft.dpi: 82
-!URxvt*font: xft:MONOFONT:size=16
 ! END desktop
 
-Xft.antialias: true
-Xft.autohint: true
-Xft.lcdfilter: lcddefault
-Xft.hintstyle: hintfull
-Xft.hinting: true
-Xft.rgba: rgb
-
-
+URxvt*font: xft:MONOFONT:size=14
 URxvt*internalBorder: 15
 URxvt*scrollBar: False
 URxvt*depth: 32

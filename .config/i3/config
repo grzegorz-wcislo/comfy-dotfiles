@@ -4,7 +4,7 @@ set_from_resource $active color12 #000000
 set_from_resource $alert color5 #ff0000
 
 # global mod key
-set $mod Mod1
+set $mod Mod4
 
 # terminal
 set $term st

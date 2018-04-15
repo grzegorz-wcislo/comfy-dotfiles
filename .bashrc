@@ -7,7 +7,10 @@
 
 alias ls='ls --color=auto'
 
-PS1='[\u@\h \W]\$ '
+RED="\[$(tput setaf 5)\]"
+RESET="\[$(tput sgr0)\]"
+
+PS1="\`if [ \$? != 0 ]; then echo $RED; fi\`[\W]\$ $RESET"
 
 # Config git dotfiles alias
 alias config='/usr/bin/git --git-dir=/home/grzegorz/.config_git/ --work-tree=/home/grzegorz'

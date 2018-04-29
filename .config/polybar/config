@@ -1,5 +1,4 @@
 [colors]
-;background = ${xrdb:color0}
 background = #e6263238
 background-alt = ${xrdb:color8}
 foreground = ${xrdb:color7}
@@ -8,29 +7,24 @@ warning = #FF0000
 
 [bar/perfect]
 width = 100%
-height = 27
+height = 30
 
-background = ${colors.background}
+background = #A0000000
 foreground = ${colors.foreground}
 
-border-size = 10
-border-bottom-size = 0
-border-color = #00000000
-
 padding-right= 1
-module-margin = 2
+module-margin = 1
 
-font-0 = "Noto Sans:style=bold:pixelsize=12;3"
-font-1 = "DejaVuSansMono Nerd Font:pixelsize=16;3"
+font-0 = "DejaVuSansMono Nerd Font:pixelsize=12:antialias=true:autohint=true;3"
 
 tray-position = right
 tray-padding = 4
 
 ; BEGIN laptop
 ;monitor = eDP1
-;modules-left = i3
-;modules-center =
-;modules-right = wlan xbacklight volume filesystem memory cpu battery temperature date
+;modules-left = bspwm
+;modules-center = time
+;modules-right = wlan xbacklight volume filesystem memory cpu battery temperature
 ; END laptop
 
 ; BEGIN desktop
@@ -40,9 +34,9 @@ tray-padding = 4
 ;modules-right = volume filesystem memory cpu temperature date
 ; END desktop
 
-[module/i3]
-type = internal/i3
-format = <label-state>
+[module/bspwm]
+type = internal/bspwm
+format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
@@ -57,76 +51,73 @@ ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-9 = 10;
 
-; focused = Active workspace on focused monitor
-label-focused = %name%:  %icon%
+label-focused = %icon%
 label-focused-background = ${xrdb:color1}
-label-focused-foreground = ${colors.background}
-label-focused-padding = 2
+label-focused-padding = 1
 
-; unfocused = Inactive workspace on any monitor
-label-unfocused = ${self.label-focused}
-label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.foreground}
-label-unfocused-padding = ${self.label-focused-padding}
+label-occupied = %icon%
+label-occupied-padding = 1
 
-; visible = Active workspace on unfocused monitor
-label-visible = ${self.label-focused}
-label-visible-background = ${colors.background}
-label-visible-foreground = ${xrdb:color1}
-label-visible-padding = ${self.label-focused-padding}
+label-urgent = %icon%
+label-urgent-foreground = ${xrdb:color1}
+label-urgent-padding = 1
 
-; urgent = Workspace with urgency hint set
-label-urgent = ${self.label-focused}
-label-urgent-background = ${self.label-focused-background}
-label-urgent-foreground = ${colors.background}
-label-urgent-underline = ${colors.warning}
-label-urgent-padding = ${self.label-focused-padding}
+label-empty = 
+
+[module/time]
+type = internal/date
+date = %d/%m
+time = %H:%M
+label = %date% %time%
+interval = 5
 
 [module/wlan]
 type = internal/network
 interface = wlp3s0
-format-connected =  <label-connected>
-format-connected-foreground = ${xrdb:color2}
-label-connected = %essid%: %local_ip%
+format-connected = <label-connected>
+format-connected-prefix = "  "
+label-connected = %essid%:%local_ip%
 format-disconnected =
 interval = 3
 
 [module/xbacklight]
 type = internal/xbacklight
-label =  %percentage%%
-label-foreground = ${xrdb:color3}
+label = %percentage%%
+format = <label>
+format-prefix = "  "
 
 [module/volume]
 type = internal/volume
-label-volume =  %percentage%%
-format-volume-foreground = ${xrdb:color4}
-format-muted-foreground = ${xrdb:color4}
-label-muted = "  "
+label-volume = %percentage%%
+label-muted = "muted"
+format = <label>
+format-volume-prefix = "  "
+format-muted-prefix = "  "
 
 [module/filesystem]
 type = internal/fs
 mount-0 = /
-label-mounted =  %free%
-label-mounted-foreground = ${xrdb:color5}
+label-mounted = %free%
+format = <label>
+format-mounted-prefix = "  "
 interval = 25
 
 [module/memory]
 type = internal/memory
-format = <label>
-format-foreground = ${xrdb:color6}
-label = %percentage_used:3%%
+label = %percentage_used:2%%
+format = <label>
+format-prefix = "  "
 interval = 5
 
 [module/cpu]
 type = internal/cpu
-format = <label>
-format-foreground = ${xrdb:color5}
-label = %percentage:3%%
+label = %percentage:2%%
+format = <label>
+format-prefix = "  "
 
 [module/battery]
 type = custom/script
 exec = /home/grzegorz/.config/polybar/battery
-format-foreground = ${xrdb:color4}
 interval = 10
 
 [module/temperature]
@@ -134,9 +125,8 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
-format = <ramp> <label>
-format-foreground = ${xrdb:color3}
-format-warn = <ramp> <label-warn>
+format = " <ramp> <label>"
+format-warn = " <ramp> <label-warn>"
 format-warn-foreground = ${colors.warning}
 
 label = %temperature%
@@ -149,14 +139,6 @@ ramp-3 = 
 ramp-4 = 
 ramp-5 = 
 ramp-6 = 
-
-[module/date]
-type = internal/date
-date = %d/%m
-time = %H:%M
-label =  %date% %time%
-format-foreground = ${xrdb:color2}
-interval = 5
 
 [settings]
 screenchange-reload = true

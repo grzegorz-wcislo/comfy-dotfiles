@@ -7,7 +7,7 @@
 
 alias ls='ls --color=auto'
 
-RED="\[$(tput setaf 5)\]"
+RED="\[$(tput setaf 1)\]"
 RESET="\[$(tput sgr0)\]"
 
 PS1="\`if [ \$? != 0 ]; then echo $RED; fi\`[\W]\$ $RESET"

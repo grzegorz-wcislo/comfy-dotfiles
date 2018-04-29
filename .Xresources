@@ -1,31 +1,39 @@
-*background         : [90]#263238
-*foreground         : #eceff1
-*cursorColor        : #eceff1
+! special
+*foreground:   #f8f8f2
+*background:   #000000
+*cursorColor:  #f8f8f2
 
 ! black
-*color0             : #263238
-*color8             : #37474f
+*color0:       #000000
+*color8:       #75715e
+
 ! red
-*color1             : #ff9800
-*color9             : #ffa74d
+*color1:       #f92672
+*color9:       #f92672
+
 ! green
-*color2             : #8bc34a
-*color10            : #9ccc65
+*color2:       #a6e22e
+*color10:      #a6e22e
+
 ! yellow
-*color3             : #ffc107
-*color11            : #ffa000
+*color3:       #f4bf75
+*color11:      #f4bf75
+
 ! blue
-*color4             : #03a9f4
-*color12            : #81d4fa
+*color4:       #66d9ef
+*color12:      #66d9ef
+
 ! magenta
-*color5             : #e91e63
-*color13            : #ad1457
+*color5:       #ae81ff
+*color13:      #ae81ff
+
 ! cyan
-*color6             : #009688
-*color14            : #26a69a
+*color6:       #a1efe4
+*color14:      #a1efe4
+
 ! white
-*color7             : #cfd8dc
-*color15            : #eceff1
+*color7:       #f8f8f2
+*color15:      #f9f8f5
 
 #define MONOFONT DejaVu Sans Mono Nerd Font
 
@@ -50,12 +58,12 @@ rofi*padding: 20
 rofi*width: 25
 rofi*color-enabled: true
 ! Property Name     BG             Border         Separator
-rofi*color-window:  argb:e6263238, argb:e6263238, argb:e6263238
+rofi*color-window:  argb:C0000000, argb:C0000000, argb:C0000000
 ! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
-rofi*color-normal:  #263238, #eceff1, #263238, #ffa74d, #263238
-rofi*color-active:  #263238, #eceff1, #263238, #ffa74d, #263238
-rofi*color-urgent:  #263238, #eceff1, #263238, #ffa74d, #263238
+rofi*color-normal:  #000000, #f8f8f2, #000000, #a1efe4, #263238
+rofi*color-active:  #000000, #f8f8f2, #000000, #a1efe4, #263238
+rofi*color-urgent:  #000000, #f8f8f2, #000000, #a1efe4, #263238
 ! Set the desired separator style
 rofi*separator-style: solid
 rofi*hide-scrollbar: true
-rofi*font: MONOFONT 20
+rofi*font: MONOFONT 16

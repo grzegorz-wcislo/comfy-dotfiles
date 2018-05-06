@@ -18,5 +18,5 @@ setxkbmap -layout pl -option caps:escape &
 # compositor and status
 #compton -b --backend glx --vsync opengl-swc --xrender-sync --xrender-sync-fence --paint-on-overlay &
 compton -b --config ~/.config/compton/compton.conf &
-polybar perfect -q &
+~/.config/polybar/launch.sh
 feh --bg-scale -z ~/Wallpapers &

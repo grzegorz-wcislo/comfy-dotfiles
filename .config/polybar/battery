@@ -2,13 +2,13 @@
 
 #constants
 BAT_LOC='/sys/class/power_supply/BAT'
-CHARGING=""
-FULL=" 100%"
-RAMP_0=""
-RAMP_1=""
-RAMP_2=""
-RAMP_3=""
-RAMP_4=""
+CHARGING=" "
+FULL="  100%"
+RAMP_0=" "
+RAMP_1=" "
+RAMP_2=" "
+RAMP_3=" "
+RAMP_4=" "
 
 main() {
     probe_batteries
@@ -92,7 +92,7 @@ show_battery_info() {
             ICON=$RAMP_0
         fi
 
-        echo "$ICON $PERC% ($TIME_LEFT)"
+        echo "$ICON $PERC%($TIME_LEFT)"
     fi
 }
 

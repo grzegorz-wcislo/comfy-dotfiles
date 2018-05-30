@@ -92,6 +92,10 @@ show_battery_info() {
             ICON=$RAMP_0
         fi
 
+        if (( $PERC < 5 )); then
+            notify-send "Low Battery" "Battery charge at $PERC%" -u critical
+        fi
+
         echo "$ICON $PERC%($TIME_LEFT)"
     fi
 }

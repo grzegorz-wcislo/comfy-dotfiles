@@ -1,36 +1,74 @@
+"
+" ~./vimrc
+"
+
+" Enable modern VIM "
 set nocompatible
+
+" Set correct encoding "
 set encoding=utf8
 
-filetype indent plugin on
+" Set filetype specific stuff "
+filetype plugin on
+filetype indent on
 syntax on
+set autoindent
+
+" General visual stuff
 set number relativenumber
 set ruler
 set nowrap
-set autoindent
+set showcmd
+set t_Co=16
 
+" Set default tab settings "
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab
 
-set showcmd
+" Searching "
+set incsearch
+set ignorecase
+set smartcase
 
-set t_Co=16
+" Finding files "
+set path+=**
+set wildmenu
 
-" KEYMAPS "
+" Windows "
+set splitbelow
+set splitright
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Buffers "
+nnoremap gb :ls<CR>:b<Space>
+
+" Tags "
+command! MakeTags !ctags -R .
+
+" Keymaps "
 nnoremap Y y$
 nnoremap <F5> :w<CR>:!make<CR>
 
-" THEMES "
+" Spelling "
+nnoremap <F6> :setlocal spell! spelllang=pl<CR>
+nnoremap <F7> :setlocal spell! spelllang=en<CR>
+
+" Themes "
 let g:airline_theme='term'
 let g:airline_powerline_fonts=1
-let g:airline_extensions=[ 'tabline' ]
-let g:airline#extensions#tabline#enabled = 1
 
-" PLUGINS "
+" Git "
+autocmd BufWritePost * GitGutter
+
+" Plugins "
 call plug#begin()
+    Plug 'airblade/vim-gitgutter'
     Plug 'valloric/youcompleteme'
-    Plug 'scrooloose/nerdtree'
     Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'pangloss/vim-javascript'
     Plug 'ap/vim-css-color'

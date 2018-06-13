@@ -125,7 +125,7 @@ c.colors.completion.odd.bg = c.colors.completion.even.bg
 ## Color of the scrollbar in the completion view.
 ## Type: QssColor
 # c.colors.completion.scrollbar.bg = '#333333'
-c.colors.completion.scrollbar.bg = foreground_color
+c.colors.completion.scrollbar.bg = background_light_color
 
 ## Color of the scrollbar handle in the completion view.
 ## Type: QssColor

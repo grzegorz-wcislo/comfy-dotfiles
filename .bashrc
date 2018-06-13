@@ -15,3 +15,8 @@ PS1="\`if [ \$? != 0 ]; then echo $RED; else echo $GREEN; fi\`[\W]\$ $RESET"
 
 # Config git dotfiles alias
 alias config='/usr/bin/git --git-dir=/home/grzegorz/.config_git/ --work-tree=/home/grzegorz'
+
+# Ruby gems
+PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+export GEM_HOME=$HOME/.gem
+

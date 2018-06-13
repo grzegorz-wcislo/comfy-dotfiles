@@ -11,8 +11,9 @@ set $mod Mod4
 set $term st
 
 # container borders and gaps
+font pango: 0
 gaps inner 10
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border normal 0
 smart_borders on
 
 # contrainer class colors

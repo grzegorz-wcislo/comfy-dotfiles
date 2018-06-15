@@ -1,6 +1,6 @@
 # Color variables
 set_from_resource $bg color8 #000000
-set_from_resource $active color2 #000000
+set_from_resource $active color7 #ffffff
 set_from_resource $alert color1 #ff0000
 set_from_resource $urgent color5 #ff0000
 
@@ -18,13 +18,13 @@ smart_borders on
 
 # contrainer class colors
 # class                 border  backgr. text    indicator child_border
-client.focused          $active $active $active $active   $active 
-client.focused_inactive $bg     $bg     $bg     $bg       $bg     
-client.unfocused        $bg     $bg     $bg     $bg       $bg     
-client.urgent           $urgent $urgent $urgent $urgent   $urgent  
-client.placeholder      $bg     $bg     $bg     $bg       $bg     
+client.focused          $active $active $active $active   $active
+client.focused_inactive $bg     $bg     $bg     $bg       $bg
+client.unfocused        $bg     $bg     $bg     $bg       $bg
+client.urgent           $urgent $urgent $urgent $urgent   $urgent
+client.placeholder      $bg     $bg     $bg     $bg       $bg
 
-client.background       $bg 
+client.background       $bg
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id \

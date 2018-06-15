@@ -5,7 +5,7 @@
 
 ! black
 *color0:       #050b10
-*color8:       #263238
+*color8:       #222d32
 
 ! red
 *color1:       #f92672
@@ -50,6 +50,9 @@ URxvt*internalBorder: 15
 URxvt*scrollBar: False
 URxvt*depth: 32
 
+!Xcursor.theme: capitaine-cursors
+Xcursor.theme: Breeze_Snow
+
 rofi*terminal: st
 rofi*lines: 5
 rofi*display-drun: Launch
@@ -60,9 +63,9 @@ rofi*color-enabled: true
 ! Property Name     BG             Border         Separator
 rofi*color-window:  argb:C0050b10, argb:C0050b10, argb:C0050b10
 ! Property Name     BG             FG       BG-alt         Head-BG  Head-FG
-rofi*color-normal:  argb:00000000, #f8f8f2, argb:00000000, #a1efe4, #263238
-rofi*color-active:  argb:00000000, #f8f8f2, argb:00000000, #a1efe4, #263238
-rofi*color-urgent:  argb:00000000, #f8f8f2, argb:00000000, #a1efe4, #263238
+rofi*color-normal:  argb:00000000, #f8f8f2, argb:00000000, #a1efe4, #222d32
+rofi*color-active:  argb:00000000, #f8f8f2, argb:00000000, #a1efe4, #222d32
+rofi*color-urgent:  argb:00000000, #f8f8f2, argb:00000000, #a1efe4, #222d32
 ! Set the desired separator style
 rofi*separator-style: solid
 rofi*hide-scrollbar: true

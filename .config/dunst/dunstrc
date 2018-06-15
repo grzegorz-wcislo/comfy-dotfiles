@@ -214,14 +214,14 @@
 
 [urgency_low]
     background = "#050b10"
-    foreground = "#66d9ef"
-    frame_color = "#66d9ef"
+    foreground = "#a6e22e"
+    frame_color = "#a6e22e"
     timeout = 10
 
 [urgency_normal]
     background = "#050b10"
-    foreground = "#a6e22e"
-    frame_color = "#a6e22e"
+    foreground = "#66d9ef"
+    frame_color = "#66d9ef"
     timeout = 10
 
 [urgency_critical]

@@ -19,7 +19,7 @@ def read_xresources(prefix):
 
 xresources = read_xresources('*')
 
-completion_color = xresources['*color2']
+completion_color = xresources['*color6']
 background_dark_color = xresources['*background']
 background_light_color = xresources['*color8']
 foreground_color = xresources['*foreground']

@@ -214,20 +214,20 @@
 
 [urgency_low]
     background = "#050b10"
-    foreground = "#a6e22e"
-    frame_color = "#a6e22e"
+    foreground = "#c3e88d"
+    frame_color = "#c3e88d"
     timeout = 10
 
 [urgency_normal]
     background = "#050b10"
-    foreground = "#66d9ef"
-    frame_color = "#66d9ef"
+    foreground = "#82aaff"
+    frame_color = "#82aaff"
     timeout = 10
 
 [urgency_critical]
     background = "#050b10"
-    foreground = "#f92672"
-    frame_color = "#f92672"
+    foreground = "#f07178f"
+    frame_color = "#f07178"
     timeout = 0
 
 # vim: ft=cfg

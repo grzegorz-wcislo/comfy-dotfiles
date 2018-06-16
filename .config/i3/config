@@ -34,7 +34,7 @@ bindsym $mod+Return exec --no-startup-id \
 bindsym $mod+e exec --no-startup-id \
     $term -e ranger
 
-# start firefox
+# start qutebrowser
 bindsym $mod+r exec --no-startup-id \
     qutebrowser
 

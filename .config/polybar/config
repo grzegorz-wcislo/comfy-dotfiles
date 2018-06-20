@@ -1,5 +1,5 @@
 [colors]
-background = ${xrdb:color8}
+background = #a0050b10
 foreground = ${xrdb:color7}
 warning = ${xrdb:color1}
 urgent = ${xrdb:color5}

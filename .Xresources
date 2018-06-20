@@ -1,14 +1,3 @@
-  [0] = "#050b10", /* black   */
-  [1] = "#f07178", /* red     */
-  [2] = "#c3e88d", /* green   */
-  [3] = "#ffcb6b", /* yellow  */
-  [4] = "#82aaff", /* blue    */
-  [5] = "#c792ea", /* magenta */
-  [6] = "#89ddff", /* cyan    */
-  [7] = "#eeffff", /* white   */
-
-  /* 8 bright colors */
-  [8]  = "#222d32", /* black   */
 ! special
 *foreground:   #eeffff
 *background:   #050b10
@@ -72,7 +61,7 @@ rofi*padding: 20
 rofi*width: 25
 rofi*color-enabled: true
 ! Property Name     BG             Border         Separator
-rofi*color-window:  #050b10,       #050b10,       #050b10
+rofi*color-window:  argb:C0050b10, argb:C0050b10, argb:C0050b10
 ! Property Name     BG             FG       BG-alt         Head-BG  Head-FG
 rofi*color-normal:  argb:00000000, #eeffff, argb:00000000, #89ddff, #222d32
 rofi*color-active:  argb:00000000, #eeffff, argb:00000000, #89ddff, #222d32

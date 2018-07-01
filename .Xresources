@@ -50,7 +50,6 @@ URxvt*internalBorder: 15
 URxvt*scrollBar: False
 URxvt*depth: 32
 
-!Xcursor.theme: capitaine-cursors
 Xcursor.theme: Breeze_Snow
 
 rofi*terminal: st

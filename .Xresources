@@ -60,7 +60,7 @@ rofi*padding: 20
 rofi*width: 25
 rofi*color-enabled: true
 ! Property Name     BG             Border         Separator
-rofi*color-window:  argb:C0050b10, argb:C0050b10, argb:C0050b10
+rofi*color-window:  argb:D0050b10, argb:D0050b10, argb:D0050b10
 ! Property Name     BG             FG       BG-alt         Head-BG  Head-FG
 rofi*color-normal:  argb:00000000, #eeffff, argb:00000000, #89ddff, #222d32
 rofi*color-active:  argb:00000000, #eeffff, argb:00000000, #89ddff, #222d32

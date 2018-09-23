@@ -137,7 +137,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id \
     xbacklight -dec 5
 
 # keyboard layout
-exec --no-startup-id setxkbmap -layout pl -option caps:escape
+# exec --no-startup-id setxkbmap -layout pl -option caps:escape
+exec --no-startup-id setxkbmap -option 'caps:ctrl_modifier'; xcape -e '#66=Escape'
 
 # default workspaces
 assign [class="^qutebrowser$"] 2

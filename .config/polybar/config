@@ -1,5 +1,5 @@
 [colors]
-background = #a0050b10
+background = #D0050b10
 foreground = ${xrdb:color7}
 warning = ${xrdb:color1}
 urgent = ${xrdb:color5}
@@ -23,6 +23,8 @@ tray-padding = 4
 
 ; BEGIN laptop
 ;monitor = eDP1
+;monitor-fallback = HDMI2
+;monitor-strict = false
 ;modules-left = i3
 ;modules-center = time 
 ;modules-right = wlan xbacklight volume filesystem memory cpu battery temperature
@@ -103,7 +105,7 @@ format = <label>
 format-prefix = "  "
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 label-volume = %percentage%%
 label-muted = "muted"
 format = <label>
@@ -145,8 +147,8 @@ format = " <ramp> <label>"
 format-warn = " <ramp> <label-warn>"
 format-warn-foreground = ${colors.warning}
 
-label = %temperature%
-label-warn = %temperature%
+label = %temperature-c%
+label-warn = %temperature-c%
 
 ramp-0 = 
 ramp-1 = 

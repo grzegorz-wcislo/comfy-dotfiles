@@ -1,39 +1,39 @@
 ! special
-*foreground:   #f8f8f2
+*foreground:   #eeffff
 *background:   #050b10
-*cursorColor:  #f8f8f2
+*cursorColor:  #eeffff
 
 ! black
 *color0:       #050b10
 *color8:       #222d32
 
 ! red
-*color1:       #f92672
-*color9:       #f92672
+*color1:       #f07178
+*color9:       #f07178
 
 ! green
-*color2:       #a6e22e
-*color10:      #a6e22e
+*color2:       #c3e88d
+*color10:      #c3e88d
 
 ! yellow
-*color3:       #f4bf75
-*color11:      #f4bf75
+*color3:       #ffcb6b
+*color11:      #ffcb6b
 
 ! blue
-*color4:       #66d9ef
-*color12:      #66d9ef
+*color4:       #82aaff
+*color12:      #82aaff
 
 ! magenta
-*color5:       #ae81ff
-*color13:      #ae81ff
+*color5:       #c792ea
+*color13:      #c792ea
 
 ! cyan
-*color6:       #a1efe4
-*color14:      #a1efe4
+*color6:       #89ddff
+*color14:      #89ddff
 
 ! white
-*color7:       #f8f8f2
-*color15:      #f9f8f5
+*color7:       #eeffff
+*color15:      #ffffff
 
 #define MONOFONT DejaVu Sans Mono Nerd Font
 
@@ -50,7 +50,6 @@ URxvt*internalBorder: 15
 URxvt*scrollBar: False
 URxvt*depth: 32
 
-!Xcursor.theme: capitaine-cursors
 Xcursor.theme: Breeze_Snow
 
 rofi*terminal: st
@@ -61,11 +60,11 @@ rofi*padding: 20
 rofi*width: 25
 rofi*color-enabled: true
 ! Property Name     BG             Border         Separator
-rofi*color-window:  argb:C0050b10, argb:C0050b10, argb:C0050b10
+rofi*color-window:  argb:D0050b10, argb:D0050b10, argb:D0050b10
 ! Property Name     BG             FG       BG-alt         Head-BG  Head-FG
-rofi*color-normal:  argb:00000000, #f8f8f2, argb:00000000, #a1efe4, #222d32
-rofi*color-active:  argb:00000000, #f8f8f2, argb:00000000, #a1efe4, #222d32
-rofi*color-urgent:  argb:00000000, #f8f8f2, argb:00000000, #a1efe4, #222d32
+rofi*color-normal:  argb:00000000, #eeffff, argb:00000000, #89ddff, #222d32
+rofi*color-active:  argb:00000000, #eeffff, argb:00000000, #89ddff, #222d32
+rofi*color-urgent:  argb:00000000, #eeffff, argb:00000000, #89ddff, #222d32
 ! Set the desired separator style
 rofi*separator-style: solid
 rofi*hide-scrollbar: true

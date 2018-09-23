@@ -576,14 +576,6 @@ c.completion.scrollbar.width = 5
 # c.content.default_encoding = 'iso-8859-1'
 c.content.default_encoding = 'utf-8'
 
-## Enable extra tools for Web developers. This needs to be enabled for
-## `:inspector` to work and also adds an _Inspect_ entry to the context
-## menu. For QtWebEngine, see `--enable-webengine-inspector` in
-## `qutebrowser --help` instead.
-## Type: Bool
-# c.content.developer_extras = False
-c.content.developer_extras = True
-
 ## Try to pre-fetch DNS entries to speed up browsing.
 ## Type: Bool
 # c.content.dns_prefetch = True

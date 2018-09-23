@@ -11,10 +11,9 @@ set $mod Mod4
 set $term st
 
 # container borders and gaps
-font pango: 0
+font pango: 2
 gaps inner 10
-for_window [class="^.*"] border normal 0
-smart_borders on
+for_window [class="^.*"] border normal 1
 
 # contrainer class colors
 # class                 border  backgr. text    indicator child_border
@@ -138,7 +137,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id \
     xbacklight -dec 5
 
 # keyboard layout
-exec --no-startup-id setxkbmap -layout pl -option caps:escape
+# exec --no-startup-id setxkbmap -layout pl -option caps:escape
+exec --no-startup-id setxkbmap -option 'caps:ctrl_modifier'; xcape -e '#66=Escape'
 
 # default workspaces
 assign [class="^qutebrowser$"] 2
@@ -147,4 +147,4 @@ assign [class="^Firefox$"] 2
 # startup
 exec --no-startup-id compton -b --config ~/.config/compton/compton.conf
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id feh --bg-scale -z ~/Wallpapers
+exec_always --no-startup-id feh --bg-scale -z ~/Wallpapers

@@ -1,6 +1,6 @@
 # Color variables
-set_from_resource $bg color8 #000000
-set_from_resource $active color7 #ffffff
+set_from_resource $bg background #000000
+set_from_resource $active foreground #ffffff
 set_from_resource $alert color1 #ff0000
 set_from_resource $urgent color5 #ff0000
 
@@ -42,7 +42,7 @@ bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
 bindsym $mod+d exec --no-startup-id \
-    rofi -modi drun -show drun -lines 1 -p Launch
+    rofi -modi drun -show drun -p Launch
 
 # change focus
 bindsym $mod+h focus left

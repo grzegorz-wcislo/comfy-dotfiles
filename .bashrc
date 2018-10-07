@@ -5,12 +5,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-
+# Pretty prompt
 RED="\[$(tput setaf 1)\]"
 GREEN="\[$(tput setaf 6)\]"
 RESET="\[$(tput sgr0)\]"
-
 PS1="\`if [ \$? != 0 ]; then echo $RED; else echo $GREEN; fi\`[\W]\$ $RESET"
 
 # Config git dotfiles alias

@@ -1,0 +1,41 @@
+[alias]
+  aa = add --all
+  ca = commit --amend --verbose
+  car = commit --amend --no-edit
+  co = checkout
+  copysha = !git rev-parse HEAD | xclip
+  df = diff
+  ds = diff --staged
+  fall = fetch --all
+  glog = log -E -i --grep
+  mup = !git checkout master && git fetch origin && echo && git sl master..origin/master && echo && git pull --quiet && git checkout -
+  pl = pull
+  ps = push
+  psf = push --force-with-lease
+  rbc = rebase --continue
+  riu = !git rebase -i $(git rev-parse --abbrev-ref --symbolic-full-name @{u})
+  rid = !git rebase -i $(git merge-base develop HEAD)
+  rim = !git rebase -i $(git merge-base master HEAD)
+  rmup = !git mup && git rebase master
+  sl = log --oneline --decorate -20
+  sla = log --oneline --decorate --graph --all -20
+  slp = log --oneline --decorate
+  slap = log --oneline --decorate --graph --all
+  uncommit = reset --soft HEAD^
+  unstage = reset
+  upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
+  ureset = !git reset --hard $(git upstream)
+
+[user]
+	name = Grzegorz Wcisło
+	email = grzegorz.oskar.wcislo@gmail.com
+  signingkey = Grzegorz Wcisło <grzegorz.oskar.wcislo@gmail.com>
+
+[push]
+  default = upstream
+
+[fetch]
+  prune = true
+
+[color]
+  ui = auto

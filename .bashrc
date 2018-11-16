@@ -28,3 +28,11 @@ alias config='/usr/bin/git --git-dir=$HOME/.config_git/ --work-tree=$HOME'
 alias ls='ls --color=auto'
 ## Text editing
 alias e="$VISUAL"
+## Git
+g() {
+    if [[ $# > 0 ]]; then
+        git $@
+    else
+        git status
+    fi
+}

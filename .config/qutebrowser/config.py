@@ -124,7 +124,14 @@ c.url.searchengines = {
     'yt':       'https://youtube.com/results?search_query={}',
     'aw':       'https://wiki.archlinux.org/?search={}',
     'r':        'https://reddit.com/r/{}',
-    'tpb':      'https://thepiratebay.org/search/{}',
     'wa':       'https://www.wolframalpha.com/input/?i={}',
 }
+
+## Bindings
+# Command mode
+config.bind('<Ctrl-n>', 'completion-item-focus next', mode='command')
+config.bind('<Ctrl-p>', 'completion-item-focus --history prev', mode='command')
+# Prompt mode
+config.bind('<Ctrl-n>', 'prompt-item-focus next', mode='prompt')
+config.bind('<Ctrl-p>', 'prompt-item-focus prev', mode='prompt')
 

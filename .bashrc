@@ -37,3 +37,13 @@ g() {
         git status
     fi
 }
+
+# TMUX
+if [[ -z "$TMUX" ]]; then
+    if [[ $(tmux ls | grep "^scratch:" | wc -l) == 0 ]]; then
+       tmux new-session -d -s "scratch"
+    fi
+    session_id=$(date +%Y%m%d%H%M%S)
+    tmux new-session -d -t "scratch" -s "scratch_$session_id"
+    exec tmux attach-session -t "scratch_$session_id" \; set-option destroy-unattached && exit;
+fi

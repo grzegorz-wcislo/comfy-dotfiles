@@ -27,7 +27,8 @@ alias config='/usr/bin/git --git-dir=$HOME/.config_git/ --work-tree=$HOME'
 ## General
 alias ls='ls --color=auto'
 ## Text editing
-alias e="$VISUAL"
+alias e="$EDITOR"
+alias v="$VISUAL"
 ## Git
 g() {
     if [[ $# > 0 ]]; then

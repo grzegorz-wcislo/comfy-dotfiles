@@ -3,7 +3,7 @@
 #constants
 BAT_LOC='/sys/class/power_supply/BAT'
 CHARGING="Charging:"
-FULL="Full: 100%"
+FULL="Full:100%"
 DISCHARGING="Discharging:"
 
 main() {
@@ -67,7 +67,7 @@ show_battery_info() {
     if [[ $STATUS == Full ]]; then
         echo $FULL
     elif [[ $STATUS == Charging ]]; then
-        echo "$CHARGING $PERC%"
+        echo "$CHARGING$PERC%"
     elif [[ $STATUS == Discharging ]]; then
         if (( $POWER == 0 )); then
             exit
@@ -80,7 +80,7 @@ show_battery_info() {
             notify-send "Low Battery" "Battery charge at $PERC%" -u critical
         fi
 
-        echo "$DISCHARGING $PERC%($TIME_LEFT)"
+        echo "$DISCHARGING$PERC%($TIME_LEFT)"
     fi
 }
 

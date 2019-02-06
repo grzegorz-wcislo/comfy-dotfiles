@@ -2,9 +2,12 @@
 
 #constants
 BAT_LOC='/sys/class/power_supply/BAT'
-CHARGING="Charging:"
-FULL="Full:100%"
-DISCHARGING="Discharging:"
+CHARGING=" "
+FULL=" "
+ALMOST_FULL=" "
+HALF_FULL=" "
+QUATER_FULL=" "
+ALMOST_EMPTY=" "
 
 main() {
     probe_batteries
@@ -65,12 +68,19 @@ get_battery_status() {
 
 show_battery_info() {
     if [[ $STATUS == Full ]]; then
-        echo $FULL
+        echo "$FULL%"
     elif [[ $STATUS == Charging ]]; then
         echo "$CHARGING$PERC%"
     elif [[ $STATUS == Discharging ]]; then
         if (( $POWER == 0 )); then
             exit
+        fi
+
+        if   [[ $PERC > 80 ]]; then icon=$FULL
+        elif [[ $PERC > 60 ]]; then icon=$ALMOST_FULL
+        elif [[ $PERC > 40 ]]; then icon=$HALF_FULL
+        elif [[ $PERC > 20 ]]; then icon=$QUATER_FULL
+        else                        icon=$ALMOST_EMPTY
         fi
 
         TIME_LEFT=$(( $ENERGY * 3600 / $POWER ))
@@ -80,7 +90,7 @@ show_battery_info() {
             notify-send "Low Battery" "Battery charge at $PERC%" -u critical
         fi
 
-        echo "$DISCHARGING$PERC%($TIME_LEFT)"
+        echo "$icon$PERC%($TIME_LEFT)"
     fi
 }
 

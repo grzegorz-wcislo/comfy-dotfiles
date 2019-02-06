@@ -16,7 +16,10 @@ module-margin = 1
 
 line-size = 2
 
-font-0 = "GohuFont:pixelsize=14;2"
+font-0 = "GohuFont:pixelsize=14:antialias=false;2"
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=12;2"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=12;2"
+font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
 
 tray-position = right
 tray-padding = 4
@@ -71,7 +74,7 @@ interval = 5
 type = internal/network
 interface = enp0s31f6
 format-connected = <label-connected>
-format-connected-prefix = cable:
+format-connected-prefix = " "
 label-connected = %essid%
 format-disconnected =
 interval = 3
@@ -80,7 +83,7 @@ interval = 3
 type = internal/network
 interface = wlp58s0
 format-connected = <label-connected>
-format-connected-prefix = wi-fi:
+format-connected-prefix = " "
 label-connected = %essid%
 format-disconnected =
 interval = 3
@@ -90,36 +93,35 @@ type = internal/backlight
 card = intel_backlight
 label = %percentage%%
 format = <label>
-format-prefix = Brightness:
+format-prefix = " "
 
 [module/volume]
-type = internal/alsa
+type = internal/pulseaudio
 label-volume = %percentage%%
-label-muted = "muted"
-format = <label>
-format-volume-prefix = Volume:
-format-muted-prefix = Volume:
+label-muted = "mute"
+format-volume-prefix = " "
+format-muted-prefix = " "
 
 [module/filesystem]
 type = internal/fs
 mount-0 = /
 label-mounted = %free%
 format = <label>
-format-mounted-prefix = Mem:
+format-mounted-prefix = " "
 interval = 25
 
 [module/memory]
 type = internal/memory
-label = %percentage_used:2%%
+label = %percentage_used:02%%
 format = <label>
-format-prefix = RAM:
+format-prefix = " "
 interval = 5
 
 [module/cpu]
 type = internal/cpu
 label = %percentage:02%%
 format = <label>
-format-prefix = CPU:
+format-prefix = " "
 
 [module/battery]
 type = custom/script
@@ -128,19 +130,20 @@ interval = 10
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 70
 
-format = <label>
-format-prefix = Temp:
-format-warn = <label-warn>
-format-warn-prefix = Temp:
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
 format-warn-foreground = ${colors.warning}
 
 label = %temperature-c%
 label-warn = %temperature-c%
 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+
 [settings]
 screenchange-reload = true
-
-vim:ft=dosini

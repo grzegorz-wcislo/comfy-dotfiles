@@ -8,7 +8,7 @@ urgent = ${xrdb:color5}
 width = 100%
 height = 18px
 
-background = ${colors.background} 
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 padding-right= 1
@@ -16,26 +16,17 @@ module-margin = 1
 
 line-size = 2
 
-font-0 = "GohuFont;2"
+font-0 = "GohuFont:pixelsize=14;2"
 
 tray-position = right
 tray-padding = 4
 
-; BEGIN laptop
-;monitor = eDP1
-;monitor-fallback = HDMI2
-;monitor-strict = false
-;modules-left = i3
-;modules-center = time 
-;modules-right = wlan xbacklight volume filesystem memory cpu battery temperature
-; END laptop
-
-; BEGIN desktop
-;monitor = HDMI-0
-;modules-left = i3
-;modules-center = time
-;modules-right = volume filesystem memory cpu temperature
-; END desktop
+monitor = eDP-1
+monitor-fallback = HDMI2
+monitor-strict = false
+modules-left = i3
+modules-center = time
+modules-right = eth wlan backlight volume filesystem memory cpu battery temperature
 
 [module/i3]
 type = internal/i3
@@ -76,20 +67,30 @@ time = %H:%M
 label = %time% %date%
 interval = 5
 
+[module/eth]
+type = internal/network
+interface = enp0s31f6
+format-connected = <label-connected>
+format-connected-prefix = cable:
+label-connected = %essid%
+format-disconnected =
+interval = 3
+
 [module/wlan]
 type = internal/network
-interface = wlp3s0
+interface = wlp58s0
 format-connected = <label-connected>
 format-connected-prefix = wi-fi:
 label-connected = %essid%
 format-disconnected =
 interval = 3
 
-[module/xbacklight]
-type = internal/xbacklight
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
 label = %percentage%%
 format = <label>
-format-prefix = Brighness:
+format-prefix = Brightness:
 
 [module/volume]
 type = internal/alsa

@@ -60,7 +60,7 @@ c.colors.messages.info.border = c.colors.messages.info.bg
 c.colors.messages.info.fg = foreground
 c.colors.messages.warning.bg = yellow
 c.colors.messages.warning.border = c.colors.messages.warning.bg
-c.colors.messages.warning.fg = foreground
+c.colors.messages.warning.fg = background
 
 c.colors.prompts.bg = background
 c.colors.prompts.border = '0 solid black'

@@ -68,7 +68,7 @@ get_battery_status() {
 
 show_battery_info() {
     if [[ $STATUS == Full ]]; then
-        echo "$FULL%"
+        echo "${FULL}100%"
     elif [[ $STATUS == Charging ]]; then
         echo "$CHARGING$PERC%"
     elif [[ $STATUS == Discharging ]]; then

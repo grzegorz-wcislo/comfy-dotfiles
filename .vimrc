@@ -59,19 +59,19 @@ nnoremap <F6> :setlocal spell! spelllang=pl<CR>
 nnoremap <F7> :setlocal spell! spelllang=en<CR>
 
 " Themes "
-let g:airline_theme='term'
-let g:airline_powerline_fonts=1
+"let g:airline_theme='term'
+"let g:airline_powerline_fonts=1
 
 " Git "
-autocmd BufWritePost * GitGutter
+"autocmd BufWritePost * GitGutter
 
 " Plugins "
-call plug#begin()
-    Plug 'airblade/vim-gitgutter'
-    Plug 'valloric/youcompleteme'
-    Plug 'octol/vim-cpp-enhanced-highlight'
-    Plug 'pangloss/vim-javascript'
-    Plug 'ap/vim-css-color'
-    Plug 'bling/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-call plug#end()
+"call plug#begin()
+    "Plug 'airblade/vim-gitgutter'
+    "Plug 'valloric/youcompleteme'
+    "Plug 'octol/vim-cpp-enhanced-highlight'
+    "Plug 'pangloss/vim-javascript'
+    "Plug 'ap/vim-css-color'
+    "Plug 'bling/vim-airline'
+    "Plug 'vim-airline/vim-airline-themes'
+"call plug#end()

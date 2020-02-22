@@ -22,10 +22,10 @@ probe_batteries() {
     BAT_0_POWER=$(cat ${BAT_LOC}0/power_now)
 
     if [[ -d ${BAT_LOC}1 ]]; then
-    BAT_1_STAT=$(cat ${BAT_LOC}1/status)
-    BAT_1_ENERGY=$(cat ${BAT_LOC}1/energy_now)
-    BAT_1_FULL=$(cat ${BAT_LOC}1/energy_full)
-    BAT_1_POWER=$(cat ${BAT_LOC}1/power_now)
+        BAT_1_STAT=$(cat ${BAT_LOC}1/status)
+        BAT_1_ENERGY=$(cat ${BAT_LOC}1/energy_now)
+        BAT_1_FULL=$(cat ${BAT_LOC}1/energy_full)
+        BAT_1_POWER=$(cat ${BAT_LOC}1/power_now)
     fi
 }
 
@@ -76,17 +76,17 @@ show_battery_info() {
             exit
         fi
 
-        if   [[ $PERC > 80 ]]; then icon=$FULL
-        elif [[ $PERC > 60 ]]; then icon=$ALMOST_FULL
-        elif [[ $PERC > 40 ]]; then icon=$HALF_FULL
-        elif [[ $PERC > 20 ]]; then icon=$QUATER_FULL
-        else                        icon=$ALMOST_EMPTY
+        if   [[ $PERC -gt 80 ]]; then icon=$FULL
+        elif [[ $PERC -gt 60 ]]; then icon=$ALMOST_FULL
+        elif [[ $PERC -gt 40 ]]; then icon=$HALF_FULL
+        elif [[ $PERC -gt 20 ]]; then icon=$QUATER_FULL
+        else                          icon=$ALMOST_EMPTY
         fi
 
         TIME_LEFT=$(( $ENERGY * 3600 / $POWER ))
         TIME_LEFT=$(date -d "1 jan 1970 + $TIME_LEFT seconds" +%H:%M)
 
-        if (( $PERC <= 5 )); then
+        if (( $PERC <= 10 )); then
             notify-send "Low Battery" "Battery charge at $PERC%" -u critical
         fi
 

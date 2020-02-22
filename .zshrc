@@ -30,12 +30,17 @@ export ALTERNATE_EDITOR=""
 export EDITOR="emacsclient -t"
 export VISUAL="emacsclient -c -a emacs"
 
+# RubyGems
+PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+
 # Aliases
 ## Config git dotfiles alias
 alias config='/usr/bin/git --git-dir=$HOME/.config_git/ --work-tree=$HOME'
 ## Test editing
 alias e="$EDITOR"
 alias v="$VISUAL"
+## Cat
+alias cat=bat
 
 ## Git
 g() {
@@ -57,3 +62,7 @@ if [[ -z "$TMUX" ]]; then
     tmux new-session -d -t "scratch" -s "scratch_$session_id"
     exec tmux attach-session -t "scratch_$session_id" \; set-option destroy-unattached && exit;
 fi
+
+# ASDF-VM
+. /opt/asdf-vm/asdf.sh
+. /opt/asdf-vm/completions/asdf.bash

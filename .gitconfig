@@ -9,6 +9,7 @@
   fall = fetch --all
   glog = log -E -i --grep
   mup = !git checkout master && git fetch origin && echo && git sl master..origin/master && echo && git pull --quiet && git checkout -
+  m = checkout master
   pl = pull
   ps = push
   psf = push --force-with-lease
@@ -39,3 +40,11 @@
 
 [color]
   ui = auto
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[github]
+	user = grzegorz-wcislo

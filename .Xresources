@@ -35,7 +35,7 @@
 *color7:       #bbc2cf
 *color15:      #dfdfdf
 
-#define MONOFONT GohuFont
+#define MONOFONT Fira Code
 
 *font: xft:MONOFONT:pixelsize=14
 

@@ -18,6 +18,8 @@ xset s off dpms 0 10 0
 lock() {
     i3lock -t -n -e -i $IMG \
         --indicator \
+        --time-font="Fira Code" \
+        --timesize=30 \
         --insidecolor=$background --ringcolor=$foreground --line-uses-inside \
         --keyhlcolor=$red --bshlcolor=$red --separatorcolor=$invisible \
         --insidevercolor=$yellow --insidewrongcolor=$red \

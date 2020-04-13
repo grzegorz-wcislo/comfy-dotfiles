@@ -30,7 +30,7 @@
 [user]
 	name = Grzegorz Wcisło
 	email = grzegorz.oskar.wcislo@gmail.com
-  signingkey = Grzegorz Wcisło <grzegorz.oskar.wcislo@gmail.com>
+	signingkey = 346655328337396B6650644D1D1D1AF00DD55FA9
 
 [push]
   default = upstream

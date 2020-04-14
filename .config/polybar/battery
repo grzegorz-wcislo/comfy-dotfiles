@@ -87,7 +87,7 @@ show_battery_info() {
         TIME_LEFT=$(date -d "1 jan 1970 + $TIME_LEFT seconds" +%H:%M)
 
         if (( $PERC <= 10 )); then
-            notify-send "Low Battery" "Battery charge at $PERC%" -u critical
+            notify-send --icon=system-error "Low Battery" "Battery charge at $PERC%" -u critical
         fi
 
         echo "$icon$PERC%($TIME_LEFT)"

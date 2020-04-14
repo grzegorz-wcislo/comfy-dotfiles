@@ -28,7 +28,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-10+28"
+    geometry = "0x5-10+28"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -53,10 +53,10 @@
     separator_height = 5
 
     # Padding between text and separator.
-    padding = 8
+    padding = 16
 
     # Horizontal padding.
-    horizontal_padding = 8
+    horizontal_padding = 16
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
@@ -71,7 +71,7 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = frame
+    separator_color = "#282c34"
 
     # Sort messages by urgency.
     sort = yes
@@ -128,7 +128,7 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = center
+    alignment = left
 
     # Show age of message if message is older than show_age_threshold
     # seconds.
@@ -158,13 +158,13 @@
     ### Icons ###
 
     # Align icons left/right/off
-    icon_position = off
+    icon_position = left
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 32
+    max_icon_size = 80
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/Papirus-Adapta-Nokto/32x32/status/:/usr/share/icons/Papirus-Adapta-Nokto/32x32/devices/
+    icon_path = "/usr/share/icons/Papirus-Dark/64x64/devices:/usr/share/icons/Papirus-Dark/64x64/apps:/usr/share/icons/Papirus-Dark/64x64/mimetypes:/usr/share/icons/Papirus-Dark/64x64/places"
 
     ### History ###
 
@@ -212,21 +212,21 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#282c34"
-    foreground = "#98be65"
-    frame_color = "#98be65"
+    background = "#3f444a"
+    foreground = "#bbc2cf"
+    frame_color = "#3f444a"
     timeout = 10
 
 [urgency_normal]
-    background = "#282c34"
-    foreground = "#51afef"
-    frame_color = "#51afef"
+    background = "#3f444a"
+    foreground = "#bbc2cf"
+    frame_color = "#3f444a"
     timeout = 10
 
 [urgency_critical]
-    background = "#282c34"
-    foreground = "#ff6c6b"
-    frame_color = "#ff6c6b"
+    background = "#3f444a"
+    foreground = "#bbc2cf"
+    frame_color = "#3f444a"
     timeout = 0
 
 # vim: ft=cfg

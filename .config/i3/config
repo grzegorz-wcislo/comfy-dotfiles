@@ -158,7 +158,7 @@ exec_always --no-startup-id setxkbmap -option 'caps:ctrl_modifier'; xcape -e '#6
 #assign [class="^Firefox$"] 2
 
 # startup
-exec --no-startup-id compton -b --config ~/.config/compton/compton.conf
+exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill -z ~/Documents/Wallpapers/*
 exec --no-startup-id emacs --daemon

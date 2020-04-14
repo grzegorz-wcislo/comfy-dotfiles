@@ -162,3 +162,8 @@ exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill -z ~/Documents/Wallpapers/*
 exec --no-startup-id emacs --daemon
+
+# applets
+exec --no-startup-id udiskie --no-automount --smart-tray
+exec --no-startup-id pasystray
+exec --no-startup-id nm-applet

@@ -58,6 +58,9 @@ nnoremap <F5> :w<CR>:!make<CR>
 nnoremap <F6> :setlocal spell! spelllang=pl<CR>
 nnoremap <F7> :setlocal spell! spelllang=en<CR>
 
+" Clipboard "
+set clipboard=unnamedplus
+
 " Themes "
 "let g:airline_theme='term'
 "let g:airline_powerline_fonts=1

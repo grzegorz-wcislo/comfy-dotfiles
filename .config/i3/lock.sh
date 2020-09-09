@@ -8,7 +8,7 @@ invisible=00000000
 
 set -e
 
-scrot $IMG
+scrot --overwrite $IMG
 magick mogrify -fill "#$background" -flip -draw "rectangle 36,26 290,126" -flip -scale 12.5% -paint 1 -scale 800% $IMG
 
 killall -q -u $USER -USR1 dunst || true

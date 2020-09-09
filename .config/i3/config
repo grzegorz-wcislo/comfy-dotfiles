@@ -8,7 +8,7 @@ set_from_resource $urgent color5 #ff0000
 set $mod Mod4
 
 # terminal
-set $term st
+set $term kitty
 
 # container borders and gaps
 # font pango: 2
@@ -161,6 +161,8 @@ exec_always --no-startup-id setxkbmap -option 'caps:ctrl_modifier'; xcape -e '#6
 exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill -z ~/Documents/Wallpapers/*
+# exec --no-startup-id systemd-run --on-calendar="*-*-* *:00,15,30,45:*" --user -- \
+#             feh --bg-fill -z ~/Documents/Wallpapers/*
 exec --no-startup-id emacs --daemon
 
 # applets

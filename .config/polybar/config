@@ -29,7 +29,8 @@ monitor-fallback = eDP1
 monitor-strict = false
 modules-left = i3
 modules-center = time
-modules-right = eth wlan backlight volume filesystem memory cpu battery temperature
+; modules-right = eth wlan backlight volume filesystem memory cpu battery temperature
+modules-right = eth wlan backlight volume temperature battery
 
 [module/i3]
 type = internal/i3

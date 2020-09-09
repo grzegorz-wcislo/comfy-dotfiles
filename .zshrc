@@ -9,7 +9,6 @@ ENABLE_CORRECTION="true"
 plugins=(
 	bundler
 	docker
-	#npm
 	ruby
 	sudo
 	yarn
@@ -27,7 +26,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Emacs
 export ALTERNATE_EDITOR=""
-export EDITOR="emacsclient -t"
+export EDITOR="vim"
 export VISUAL="emacsclient -c -a emacs"
 
 # RubyGems
@@ -64,5 +63,4 @@ if [[ -z "$TMUX" ]]; then
 fi
 
 # ASDF-VM
-. /opt/asdf-vm/asdf.sh
-. /opt/asdf-vm/completions/asdf.bash
+. /home/grzegorz/.asdf/asdf.sh

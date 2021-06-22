@@ -14,6 +14,7 @@ set $term kitty
 # font pango: 2
 gaps inner 10
 for_window [class="^.*"] border pixel 3
+hide_edge_borders smart
 
 # contrainer class colors
 # class                 border  backgr. text    indicator child_border
@@ -150,19 +151,12 @@ bindsym --release Print exec --no-startup-id \
     scrot -s
 
 # keyboard layout
-# exec --no-startup-id setxkbmap -layout pl -option caps:escape
 exec_always --no-startup-id setxkbmap -option 'caps:ctrl_modifier'; xcape -e '#66=Escape'
 
-# default workspaces
-#assign [class="^qutebrowser$"] 2
-#assign [class="^Firefox$"] 2
-
 # startup
-exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
+exec --no-startup-id picom -b --config ~/.config/picom/picom.conf --experimental-backends
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill -z ~/Documents/Wallpapers/*
-# exec --no-startup-id systemd-run --on-calendar="*-*-* *:00,15,30,45:*" --user -- \
-#             feh --bg-fill -z ~/Documents/Wallpapers/*
 exec --no-startup-id emacs --daemon
 
 # applets

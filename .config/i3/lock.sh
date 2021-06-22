@@ -19,14 +19,14 @@ lock() {
     i3lock -t -n -e -i $IMG \
         --indicator \
         --time-font="Fira Code" \
-        --timesize=30 \
-        --insidecolor=$background --ringcolor=$foreground --line-uses-inside \
-        --keyhlcolor=$red --bshlcolor=$red --separatorcolor=$invisible \
-        --insidevercolor=$yellow --insidewrongcolor=$red \
-        --ringvercolor=$foreground --ringwrongcolor=$foreground --indpos="x+86:y+1004" \
-        --radius=20 --veriftext="" --wrongtext="" --noinputtex="" \
-        --force-clock --timecolor=$foreground --timepos="ix+r+10:iy+r/2" --time-align 1 \
-        --datecolor=$invisible
+        --time-size=30 \
+        --inside-color=$background --ring-color=$foreground --line-uses-inside \
+        --keyhl-color=$red --bshl-color=$red --separator-color=$invisible \
+        --insidever-color=$yellow --insidewrong-color=$red \
+        --ringver-color=$foreground --ringwrong-color=$foreground --ind-pos="x+86:y+1004" \
+        --radius=20 --verif-text="" --wrong-text="" --noinput-text="" \
+        --force-clock --time-color=$foreground --time-pos="ix+20+10:iy+10" --time-align 1 \
+        --date-color=$invisible
 
     xset s off -dpms
 

@@ -7,11 +7,8 @@ DISABLE_AUTO_UPDATE="true"
 ENABLE_CORRECTION="true"
 
 plugins=(
-	bundler
 	docker
-	ruby
 	sudo
-	yarn
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -39,6 +36,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.config_git/ --work-tree=$HOME'
 alias e="$EDITOR"
 alias v="$VISUAL"
 ## Cat
+export BAT_THEME=base16
 alias cat=bat
 
 ## Git

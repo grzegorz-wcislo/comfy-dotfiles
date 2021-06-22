@@ -24,10 +24,10 @@ font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=12;2"
 tray-position = right
 tray-padding = 4
 
-monitor = HDMI2
+monitor = DP1
 monitor-fallback = eDP1
 monitor-strict = false
-modules-left = i3
+modules-left = i3 spotify
 modules-center = time
 ; modules-right = eth wlan backlight volume filesystem memory cpu battery temperature
 modules-right = eth wlan backlight volume temperature battery
@@ -63,6 +63,13 @@ label-urgent-background = ${self.label-visible-background}
 label-urgent-foreground = ${self.label-visible-foreground}
 label-urgent-padding = ${self.label-focused-padding}
 label-urgent-underline = ${colors.foreground}
+
+[module/spotify]
+type = custom/script
+interval = 3
+format-prefix = " "
+format = <label>
+exec = python ~/.config/polybar/spotify_status.py -f '{artist}: {song}' -q -t 50
 
 [module/time]
 type = internal/date
